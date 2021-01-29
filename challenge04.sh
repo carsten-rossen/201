@@ -15,8 +15,7 @@ mkdir ${dir_names[*]}
 
 for name in ${dir_names[@]}
 do
-    path="/home/serv/201/$name"
-    dir_paths+=("$path")
+    dir_paths+=("/home/serv/201/$name")
 done
 
 while [ $index -lt 4 ] 
