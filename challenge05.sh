@@ -5,7 +5,7 @@
 # Date:             1/29/21
 # Purpose:          Displays PIDs, asks user for PID, kills process with that PID
 
-# Declaration of variables
+# Declaration of variable
 option="y"
 
 # Main
@@ -18,3 +18,5 @@ do
     echo -e "\nKill another process? (y to continue / any other key to stop)"
     read option
 done
+
+# End
