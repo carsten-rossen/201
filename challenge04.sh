@@ -16,10 +16,6 @@ mkdir ${dir_names[*]}
 for name in ${dir_names[@]}
 do
     dir_paths+=("/home/serv/201/$name")
-done
-
-while [ $index -lt 4 ] 
-do
     touch ${dir_paths[$index]}/new.txt
     index=$((index + 1))
 done
