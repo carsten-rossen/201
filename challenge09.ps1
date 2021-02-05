@@ -6,7 +6,6 @@
 
 # Main
 
-
 # Outputs all events from the System event log that occurred in the last
 # 24 hours to a file on the desktop named last-24.txt
 Get-EventLog -LogName System -After (Get-Date).AddHours(-24) > C:\Users\first\Desktop\last_24.txt
@@ -21,6 +20,7 @@ Get-EventLog -LogName System | Where-Object {$_.EventID -eq 16}
 # Prints the most recent 20 entries from the System event log
 Get-EventLog -LogName System -Newest 20
 
-
 # Prints all sources of the 500 most recent entries in the System event log
 Get-EventLog -LogName System -Newest 500 | Select-Object -Property Source | Out-String -Width 500
+
+# End
