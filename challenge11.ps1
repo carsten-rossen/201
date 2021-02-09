@@ -23,3 +23,5 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
 
 # Disable SMBv1, and insecure protocol
 Set-SmbServerConfiguration -EnableSMB1Protocol $false -Force
+
+# End
