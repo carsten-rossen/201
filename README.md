@@ -17,3 +17,7 @@ In Ops 201, I learned how to:
 - create virtual machines in the cloud using AWS
 
 My favorite ops challenge was seattle-ops201d2-challenge06.sh. This script allows the user to search for ports on a specified computer. I feel that the script is very useful, and also that I did a good job creating a script that optimizes user experience by communicating back and forth with the user.
+
+If I had more time, I would like to keep working on seattle-ops201d2-challenge07.sh. I would add code to this script to make it output more information about the computer, and let the user choose what information they would like to see.
+
+I would like to spend more time on PowerShell. I think that PowerShell is an extremely powerful language, and it doesn't hurt that the vast majority of computers run Windows.
