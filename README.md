@@ -1,1 +1,1 @@
-# These are my challenges for Ops 201.
+This repo is all about getting familiar with using basic bash and PowerShell commands to perform and automate tasks. There may come a time when I have to perform simple tasks on every office computer in a whole company, so learning how to automate them has the potential to save time and energy.
