@@ -1,5 +1,3 @@
-Hello David.
-
 This repo is all about getting familiar with using basic bash and PowerShell commands to perform and automate tasks. There may come a time when I have to perform simple tasks on every office computer in a whole company, so learning how to automate them has the potential to save time and energy.
 
 In Ops 201, I learned how to:
@@ -23,5 +21,3 @@ My favorite ops challenge was seattle-ops201d2-challenge06.sh. This script allow
 If I had more time, I would like to keep working on seattle-ops201d2-challenge07.sh. I would add code to this script to make it output more information about the computer, and let the user choose what information they would like to see.
 
 I would like to spend more time on PowerShell. I think that PowerShell is an extremely powerful language, and it doesn't hurt that the vast majority of computers run Windows.
-
-Bye David.
