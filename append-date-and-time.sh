@@ -21,3 +21,5 @@ datetime="$month.$day.$year-$hour:$minute:$second"
 cp /var/log/syslog ./"syslog ($datetime)"
 
 echo $datetime >> ./"syslog ($datetime)"
+
+# End
