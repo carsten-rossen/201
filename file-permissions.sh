@@ -9,6 +9,7 @@
 
 # Functions
 
+# Asks the user for a directory path to perform chmod on.
 change_path () {
     echo "Please name the directory path:"
     read dirpath
@@ -24,6 +25,7 @@ change_path () {
     fi
 }
 
+# Asks the user for a permissions number to perform chmod with.
 change_permissions () {
     echo -e "\nPlease supply a permissions number:"
     read permissions_num
