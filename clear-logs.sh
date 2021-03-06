@@ -22,6 +22,7 @@ print_logs () {
 
 
 # Main
+
 print_logs
 
 cat /dev/null > /var/log/syslog
@@ -31,4 +32,6 @@ echo -e "\n\nClearing logs...Done\n"
 print_logs
 
 echo -e "\nDone."
+
+
 # End
