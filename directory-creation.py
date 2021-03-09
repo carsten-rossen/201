@@ -4,7 +4,7 @@
 # Class Name: Ops 301
 # Author Name: Carsten Rossen
 # Date of Latest Revision: 3/9/21
-# Purpose: 
+# Purpose: Prints information about a specified file path.
 
 # Import libraries
 import os
