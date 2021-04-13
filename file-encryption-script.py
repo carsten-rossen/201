@@ -4,10 +4,16 @@
 # Class Name: Ops 401
 # Author Name: Carsten Rossen
 # Date of Latest Revision: 4/12/21
-# Purpose: 
+# Purpose: Encrypts and decrypts files and strings
+
+# Import libraries
 
 from cryptography.fernet import Fernet
 
+
+# declare functions
+
+# displays menu screen
 def menu():
     print("SELECTION MENU:")
     print("   1. Encrypt a file")
@@ -16,6 +22,7 @@ def menu():
     print("   4. Decrypt a message")
     return input("\nInput option: ")
 
+# encrypts file
 def encrypt_file(path):
     with open(path, 'rb') as file:
         original = file.read()
@@ -25,6 +32,7 @@ def encrypt_file(path):
     with open(path, 'wb') as encrypted_file:
         encrypted_file.write(encrypted)
 
+# decrypts file
 def decrypt_file(path):
     with open(path, 'rb') as encrypted_file:
         encrypted = encrypted_file.read()
@@ -34,21 +42,27 @@ def decrypt_file(path):
     with open(path, 'wb') as decrypted_file:
         decrypted_file.write(decrypted)
 
+# encrypts string
 def encrypt_string(msg):
-    print(f.encrypt(msg))
+    print("Ciphertext is ", f.encrypt(msg.encode()))
 
+# decrypts string
 def decrypt_string(msg):
-    print(msg.decode('utf-8'))
+    print("Plaintext is ", f.decrypt(msg).decode('utf-8'))
 
+# generates a new key and saves it to a file
 def write_key():
     key = Fernet.generate_key()
     with open("key.key", "wb") as key_file:
         key_file.write(key)
 
+# loads a previously generated key
 def load_key():
     return open("key.key", "rb").read()
 
-def direct(option)
+# directs script to perform the specified function, 
+# or to reinitiate the menu screen if an improper option was entered
+def direct(option):
     if option == 1 or option == 2:
         path = input('Please specify full file path: ')
 
@@ -68,16 +82,23 @@ def direct(option)
     else:
         print('Please print a number corresponding to an option (or CTRL + C to quit): ')
         option = menu()
-        direct(option)
+        direct(int(option))
 
+
+# Main
 
 write_key()
 key = load_key()
+
+# initialize the Fernet class
 f = Fernet(key)
 
+# get a user option
 option = menu()
-direct(option)
+
+# perform desired option
+direct(int(option))
 
 
-
+# End
 
