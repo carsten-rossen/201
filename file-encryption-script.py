@@ -3,12 +3,13 @@
 # Script Name: File Encryption Script (Challenge 06)
 # Class Name: Ops 401
 # Author Name: Carsten Rossen
-# Date of Latest Revision: 4/12/21
+# Date of Latest Revision: 4/13/21
 # Purpose: Encrypts and decrypts files and strings
 
 # Import libraries
 
 from cryptography.fernet import Fernet
+import os
 
 
 # declare functions
@@ -20,6 +21,8 @@ def menu():
     print("   2. Decrypt a file")
     print("   3. Encrypt a message")
     print("   4. Decrypt a message")
+    print("   5. Encrypt a folder")
+    print("   6. Decrypt a folder")
     return input("\nInput option: ")
 
 # encrypts file
@@ -48,7 +51,8 @@ def encrypt_string(msg):
 
 # decrypts string
 def decrypt_string(msg):
-    print("Plaintext is ", f.decrypt(msg).decode('utf-8'))
+    message = str.encode(msg)
+    print("Plaintext is ", f.decrypt(message))
 
 # generates a new key and saves it to a file
 def write_key():
@@ -79,10 +83,32 @@ def direct(option):
         else: 
             decrypt_string(msg)
 
+    elif option == 5 or option == 6:
+        path = input("Please specify the full folder path: ")
+
+        if option == 5:
+            encrypt_folder(path)
+        else:
+            decrypt_folder(path)
+
     else:
         print('Please print a number corresponding to an option (or CTRL + C to quit): ')
         option = menu()
         direct(int(option))
+
+# Encrypts the entire contents of a folder
+def encrypt_folder(path):
+    for (path,dirs,files) in os.walk(path):
+        for file in files:
+            print("Encrypting", file)
+            encrypt_file(str(os.path.join(path,file)))
+
+# Decrypts the entire contents of a folder
+def decrypt_folder(path):
+    for (path,dirs,files) in os.walk(path):
+        for file in files:
+            print("Decrypting", file)
+            decrypt_file(str(os.path.join(path,file)))
 
 
 # Main
